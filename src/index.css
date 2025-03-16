@@ -9,3 +9,10 @@
 body {
   background: rgb(244, 244, 244);
 }
+.scrollbar-hidden::-webkit-scrollbar{
+   display: none;
+}
+.scrollbar-hidden{
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
