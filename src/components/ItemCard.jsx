@@ -21,7 +21,7 @@ const ItemCard = ({ id, name, qty, price, img }) => {
             icon: "👋",
           });
         }}
-        className="absolute right-1 text-gray-600 cursor-pointer"
+        className="absolute right-1 text-red-600 cursor-pointer"
       />
       
       <img src={img} alt="" className="w-[50px] h-[50px]  " />

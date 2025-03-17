@@ -32,7 +32,7 @@ const Cart = () => {
         </div>
 
 
-        <div className="h-[65vh] border overflow-y-scroll scrollbar-hidden  pr-2">
+        <div className="h-[65vh] border overflow-y-scroll scrollbar-hidden   pr-2">
           {cartItems.length > 0 ? (
             cartItems.map((food) => {
               return (
@@ -69,13 +69,20 @@ const Cart = () => {
           </button>
         </div>
       </div>
-      <FaShoppingCart
-        onClick={() => setActiveCart(!activeCart)}
-        className={`rounded-full bg-white shadow-md text-5xl p-3 fixed bottom-4 right-4 ${totalQty > 0 && "animate-bounce delay-500 transition-all"
-          } `}
-      />
+
+      <FaShoppingCart onClick={() => setActiveCart(!activeCart)}
+        className={`rounded-full bg-white shadow-md text-5xl p-3 fixed bottom-4 cursor-pointer right-4 ${totalQty > 0 && 'animate-bounce duration-300 transition-all'}
+            } `}>
+
+      </FaShoppingCart>
+      {
+        totalQty > 0 && <p className={`bg-red-600 flex items-center justify-center text-[10px] cursor-pointer font-bold  w-5 h-5 fixed bottom-14 right-5 rounded-full text-white `}>{totalQty}</p>
+      }
+
     </>
   );
 };
+
+// ${totalQty > 0 && "animate-bounce delay-500 transition-all"
 
 export default Cart;
